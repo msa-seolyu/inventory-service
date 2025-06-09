@@ -17,6 +17,11 @@ public enum ErrorCode {
     INVALID_AUTHORITY(HttpStatus.FORBIDDEN, "10006", "접근 권한이 없습니다."),
     FILE_DOWNLOAD_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, "10007", "File Download Error"),
 
+    // Inventory
+    INVENTORY_NOT_FOUND(HttpStatus.BAD_REQUEST, "I0001", "재고를 찾을 수 없습니다."),
+    INSUFFICIENT_STOCK(HttpStatus.BAD_REQUEST, "I0002", "재고가 부족합니다."),
+    INVALID_DEDUCT_QUANTITY(HttpStatus.BAD_REQUEST, "I0003", "차감 수량은 0보다 커야 합니다."),
+
     ;
 
     private final HttpStatus status;
